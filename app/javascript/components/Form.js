@@ -25,8 +25,8 @@ const languages = [
         label: 'PHP',
     },
     {
-        value: 'C',
-        label: 'C',
+        value: 'Java',
+        label: 'Java',
     },
 ];
 
@@ -69,7 +69,7 @@ class Form extends Component {
 
     handleSubmit(e) {
         const fetchRep = async () => {
-            const res = await axios.get("https://api.github.com/search/repositories?q=language:" + this.state.setLanguage + "&sort=stars&order=desc&per_page=15")
+            const res = await axios.get("https://api.github.com/search/repositories?q=language:" + this.state.setLanguage + "&sort=stars&order=desc&per_page=10")
                 .then(response => {
                     this.setState({
                         projects: Array.from(response.data.items),
@@ -118,7 +118,7 @@ class Form extends Component {
                         color="primary"
                         style={{ background: '#ef0044' }}
                         className={classes.submit}>
-                        Search
+                            Search
                     </Button>
                 </div>
             </form>

@@ -28,7 +28,7 @@ const styles = theme => ({
     },
     root: {
         width: '100%',
-        maxWidth: 500,
+        maxWidth: 1000,
     },
     pos: {
         marginBottom: 12,
@@ -59,13 +59,14 @@ class List extends Component {
         this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick(name, language, stars, login) {
+    handleClick(name, language, stars, login, image_url) {
         axios.post("/api/v1/repositories", {
             repository: {
                 name: name,
                 login_name: login,
                 stars: stars,
-                language: language
+                language: language,
+                image_url: image_url
             }
         }, { withCredentials: true }
         ).then(response => {
@@ -91,19 +92,22 @@ class List extends Component {
                             justify="center"
                             style={{ minHeight: '10vh' }}
                         >
-                            <Grid item xs={3}>
+                            <Grid item xs={6}>
                                 <div className={classes.root} >
                                     <div className={classes.section1}>
                                         <Grid container alignItems="center">
                                             <Grid item xs>
+                                                <img
+                                                    src={post.owner.avatar_url}
+                                                    alt="new"
+                                                    width="150" height="150"
+                                                />
                                                 <Typography className={classes.title} color="textSecondary" gutterBottom>
                                                     {post.full_name}
                                                 </Typography>
                                             </Grid>
-                                            <Typography variant="h5" component="h2">
-                                                {post.language}
-                                            </Typography>
                                         </Grid>
+
                                         <Divider variant="middle" />
                                         <div className={classes.section2}>
                                             <Popup
@@ -116,10 +120,11 @@ class List extends Component {
                                                 <ul>
                                                     <li> forks: {post.forks}</li>
                                                     <li> stars: {post.stargazers_count} </li>
+                                                    <li> language: {post.language} </li>
                                                 </ul>
                                             </Popup>
 
-                                            <Button color="primary" variant="outlined" style={{ color: '#ef0044' }} onClick={e => this.handleClick(post.full_name, post.language, post.stargazers_count, post.owner.login)}>
+                                            <Button color="primary" variant="outlined" style={{ color: '#ef0044' }} onClick={e => this.handleClick(post.full_name, post.language, post.stargazers_count, post.owner.login, post.owner.avatar_url)}>
                                                 Salvar
                                             </Button>
                                         </div>
@@ -131,7 +136,7 @@ class List extends Component {
             });
         } else {
             return (
-                <div>
+                <div className='widget'>
                 </div>
             )
         }

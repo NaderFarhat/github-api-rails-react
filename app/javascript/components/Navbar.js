@@ -12,20 +12,20 @@ import Button from '@material-ui/core/Button';
 
 const styles = theme => ({
   root: {
-      flexGrow: 1,
+    flexGrow: 1,
   },
   menuButton: {
-      marginRight: theme.spacing(2),
+    marginRight: theme.spacing(2),
   },
   home: {
-      marginRight: 50
-      //marginLeft: theme.spacing(2)
+    marginRight: 50
+    //marginLeft: theme.spacing(2)
   },
   newPost: {
-      marginRight: 50
+    marginRight: 50
   },
   title: {
-      flexGrow: 1,
+    flexGrow: 1,
   },
 
 });
@@ -35,38 +35,38 @@ class Navbar extends Component {
     super(props);
   }
 
-  
+
   render() {
     const { classes } = this.props;
-  return (
-    <div >
-      <AppBar position="static" style={{ background: '#ef0044' }}>
-        <Toolbar>
-          <Typography variant="h6" className={classes.title} color="inherit">
-            Ateliware
+    return (
+      <div >
+        <AppBar position="static" style={{ background: '#ef0044' }}>
+          <Toolbar>
+            <Typography variant="h6" className={classes.title} color="inherit">
+              Ateliware
           </Typography>
-          <Button component={Link}
-            to="/" variant="outlined"
-            className={classes.home}
-            color="primary"
-            style={{ color: '#FFFFFF' }}>
+            <Button component={Link}
+              to="/" variant="outlined"
+              className={classes.home}
+              color="primary"
+              style={{ color: '#FFFFFF' }}>
               Home
           </Button>
-          
-          <Button component={Link}
-            to="/favorites"
-            variant="outlined"
-            className={classes.newPost}
-            color="primary"
-            style={{ color: '#FFFFFF' }}>
+
+            <Button component={Link}
+              to="/favorites"
+              variant="outlined"
+              className={classes.newPost}
+              color="primary"
+              style={{ color: '#FFFFFF' }}>
               Favorites
           </Button>
 
-        </Toolbar>
-      </AppBar>
-    </div>
-  );
-}
+          </Toolbar>
+        </AppBar>
+      </div>
+    );
+  }
 
 }
 

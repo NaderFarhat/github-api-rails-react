@@ -51,7 +51,7 @@ class Itens extends Component {
         if (this.props.itens !== undefined) {
             return this.props.itens.map((post) => {
                 return (
-                    <>
+                    <div className="widget">
                         <Grid
                             container
                             spacing={0}
@@ -60,11 +60,16 @@ class Itens extends Component {
                             justify="center"
                             style={{ minHeight: '10vh' }}
                         >
-                            <Grid item xs={3}>
+                            <Grid item xs={6}>
                                 <div className={classes.root} >
                                     <div className={classes.section1}>
                                         <Grid container alignItems="center">
                                             <Grid item xs>
+                                                <img
+                                                    src={post.image_url}
+                                                    alt="new"
+                                                    width="100" height="100"
+                                                />
                                                 <Typography className={classes.title} color="textSecondary" gutterBottom>
                                                     {post.name}
                                                 </Typography>
@@ -90,11 +95,11 @@ class Itens extends Component {
                                 </div>
                             </Grid>
                         </Grid>
-                    </>);
+                    </div>);
             });
         } else {
             return (
-                <div>
+                <div className="widget">
                 </div>
             )
         }
