@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar';
 import Itens from './Itens';
-import List from '@material-ui/core/List';
+import BottomBar from './BottomBar';
 import axios from 'axios';
 
 class Favorites extends Component {
@@ -30,6 +30,7 @@ class Favorites extends Component {
             <div>
                 <Navbar/>
                 <Itens itens={this.state.repositories} />
+                <BottomBar/>
             </div>
           );
     }

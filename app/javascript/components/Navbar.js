@@ -42,9 +42,14 @@ class Navbar extends Component {
       <div >
         <AppBar position="static" style={{ background: '#ef0044' }}>
           <Toolbar>
+            <img
+              src="https://media.glassdoor.com/sql/2617805/ateliware-squarelogo-1568813458428.png"
+              alt="new"
+              width="70" height="70"
+            />
             <Typography variant="h6" className={classes.title} color="inherit">
               Ateliware
-          </Typography>
+            </Typography>
             <Button component={Link}
               to="/" variant="outlined"
               className={classes.home}

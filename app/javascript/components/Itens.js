@@ -60,7 +60,7 @@ class Itens extends Component {
                             justify="center"
                             style={{ minHeight: '10vh' }}
                         >
-                            <Grid item xs={6}>
+                            <Grid item xs={12}>
                                 <div className={classes.root} >
                                     <div className={classes.section1}>
                                         <Grid container alignItems="center">
@@ -74,23 +74,30 @@ class Itens extends Component {
                                                     {post.name}
                                                 </Typography>
                                             </Grid>
-                                        </Grid>
-                                        <Divider variant="middle" />
-                                        <div className={classes.section2}>
-                                            <Popup
-                                                trigger={open => (
-                                                    <Button className="button" variant="outlined" style={{ color: '#ef0044' }}>Detalhes</Button>
-                                                )}
-                                                position="right center"
-                                                closeOnDocumentClick
-                                            >
+                                        
+                                            <Divider variant="middle" />
+                                            <div className={classes.section2}>
+                                                <Popup
+                                                    trigger={open => (
+                                                        <Button className="button" variant="outlined" style={{ color: '#ef0044' }}>Detalhes</Button>
+                                                    )}
+                                                    position="right center"
+                                                    closeOnDocumentClick
+                                                >
                                                 <ul>
-                                                    <li> user: {post.login_name}</li>
-                                                    <li> stars: {post.stars} </li>
-                                                    <li> language: {post.language} </li>
-                                                </ul>
-                                            </Popup>
-                                        </div>
+                                                    <li><Typography className={classes.title} variant="subtitle1: 'h6'" color="textSecondary" style={{ color: '#ef0044' }}>
+                                                        user: {post.login_name}
+                                                    </Typography></li>
+                                                    <li><Typography className={classes.title} variant="subtitle1: 'h6'" color="textSecondary" style={{ color: '#ef0044' }}>
+                                                        stars: {post.stars}
+                                                    </Typography></li>
+                                                    <li><Typography className={classes.title} variant="subtitle1: 'h6'" color="textSecondary" style={{ color: '#ef0044' }}>
+                                                        language: {post.language}
+                                                    </Typography></li>
+                                                </ul>  
+                                                </Popup>
+                                            </div>
+                                        </Grid>
                                     </div>
                                 </div>
                             </Grid>

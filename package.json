@@ -20,8 +20,11 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
+    "react-spring": "^8.0.27",
+    "react-toast-notifications": "^2.4.0",
     "react_ujs": "^2.6.0",
     "reactjs-popup": "^1.5.0",
+    "toasted-notes": "^3.0.0",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
@@ -46,6 +49,8 @@
       "node_modules",
       "app/javascript"
     ],
-    "setupFilesAfterEnv": ["./spec/javascript/setupTests.js"]
+    "setupFilesAfterEnv": [
+      "./spec/javascript/setupTests.js"
+    ]
   }
 }
