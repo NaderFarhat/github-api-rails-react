@@ -32,7 +32,7 @@ development:
   username: postgres
 
   # The password associated with the postgres role (username).
-  password: mandaha23
+  password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -68,7 +68,7 @@ test:
 # for a full rundown on how to provide these environment variables in a
 # production deployment.
   username: postgres
-  password: mandaha23
+  password:
   port: 5432
 # On Heroku and other platform providers, you may have a full connection URL
 # available as an environment variable. For example:
