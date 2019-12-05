@@ -1,24 +1,16 @@
-# README
+# Desafio técnico
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Desafio técnico proposta pela Ateliware.
 
-Things you may want to cover:
+Link da aplicação no heroku: https://ateliware-dev-challenge-nader.herokuapp.com
 
-* Ruby version
+Esta aplicação se conecta à API do Github e retorna os 10 repositórios com mais stars de uma
+determinada linguagem de programação (Ruby, Python, Javascript, PHP ou Java).
 
-* System dependencies
+* Para o Backend foi utilizado o framework Rails e para o Frontend foi utilizado React.
 
-* Configuration
+* Para os teste do Backend foi utilizado rspec e para os testes no Frontend foi utilizado Jest e Enzyme.
 
-* Database creation
+* O banco de dados utilizado nessa aplicação foi Postgres.
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
