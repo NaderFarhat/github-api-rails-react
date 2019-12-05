@@ -6,6 +6,7 @@ Link da aplicação no heroku: https://ateliware-dev-challenge-nader.herokuapp.c
 
 Esta aplicação se conecta à API do Github e retorna os 10 repositórios com mais *stars* de uma
 determinada linguagem de programação (Ruby, Python, Javascript, PHP ou Java).
+É possível salvar os repositórios favoritos em um banco de dados.
 
 * Para o Backend foi utilizado o framework Rails e para o Frontend foi utilizado React.
 
