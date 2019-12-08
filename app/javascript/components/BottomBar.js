@@ -16,10 +16,6 @@ const styles = {
       bottom: 0,
       alignItems: 'center',
     },
-    menuButton: {
-      marginLeft: -12,
-      marginRight: -12
-    },
     actionButtons: {
       marginLeft: "auto"
     },

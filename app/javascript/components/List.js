@@ -16,14 +16,6 @@ import axios from 'axios';
 import Button from '@material-ui/core/Button';
 
 const styles = theme => ({
-    card: {
-        Width: 500,
-    },
-    bullet: {
-        display: 'inline-block',
-        margin: '0 2px',
-        transform: 'scale(0.8)',
-    },
     title: {
         fontSize: 24,
     },
@@ -31,21 +23,12 @@ const styles = theme => ({
         width: '100%',
         maxWidth: 1000,
     },
-    pos: {
-        marginBottom: 12,
-    },
-    chip: {
-        marginRight: theme.spacing(1),
-    },
     section1: {
         margin: theme.spacing(5, 2),
         maxWidth: 1000,
     },
     section2: {
         margin: theme.spacing(2),
-    },
-    section3: {
-        margin: theme.spacing(3, 1, 1),
     },
 });
 
