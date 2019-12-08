@@ -5,7 +5,12 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
 import toaster from 'toasted-notes';
+<<<<<<< HEAD
 import 'toasted-notes/src/styles.css';
+=======
+//import 'toasted-notes/src/styles.css';
+import './styles.css'
+>>>>>>> make it better
 import Popup from "reactjs-popup";
 import axios from 'axios';
 import Button from '@material-ui/core/Button';
@@ -76,6 +81,13 @@ class List extends Component {
             }
         }).catch(error => {
             console.log("registration error", error);
+<<<<<<< HEAD
+=======
+            toaster.notify('Repository already saved!', {
+                position: 'top',
+                duration: 4000
+            })
+>>>>>>> make it better
         });
     }
 

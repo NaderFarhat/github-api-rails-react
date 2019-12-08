@@ -21,7 +21,10 @@ class RepositoriesController < ApplicationController
         repository.save!
 
         if repository.save
+<<<<<<< HEAD
             flash[:notice] = "Teste."
+=======
+>>>>>>> make it better
             render json: {
                 status: :created,
             }
